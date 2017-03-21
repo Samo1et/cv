@@ -1,7 +1,7 @@
 'use strict';
 
 import template from './resume.jade';
-import '../styles/resume.styl';
+//import '../styles/index.styl';
 
 export default class Resume {
     constructor(options) {

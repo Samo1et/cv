@@ -53,7 +53,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var samo1etMenu = new _index2.default({
-	    title: 'Resume'
+	    title: 'Name!'
 	});
 
 	document.body.appendChild(samo1etMenu.elem);
@@ -72,11 +72,11 @@
 
 	var _resume2 = _interopRequireDefault(_resume);
 
-	__webpack_require__(5);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	//import '../styles/index.styl';
 
 	var Resume = function Resume(options) {
 	    _classCallCheck(this, Resume);
@@ -355,12 +355,6 @@
 /***/ function(module, exports) {
 
 	/* (ignored) */
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
