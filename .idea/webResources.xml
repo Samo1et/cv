@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/protected" />
+            <path value="file://$PROJECT_DIR$/assetsSource/resume" />
           </resourceRoots>
         </entryData>
       </entry>
