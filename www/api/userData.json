@@ -1,7 +1,6 @@
 [
     {
-        "userName": "Dmitriy",
-        "userSurname": "Samoylis",
-        "profession": "Front-end developer"
+        "id": 1,
+        "name": "Википедия"
     }
 ]

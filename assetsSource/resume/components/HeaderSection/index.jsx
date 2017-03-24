@@ -1,26 +1,19 @@
 import React, {Component, PropTypes} from 'react';
-import './style.less';
+import './style.styl';
 
-class SiteItem extends Component {
+class HeaderSection extends Component {
     static propTypes = {
-        newsData: PropTypes.shape({
-            name: PropTypes.string,
-            description: PropTypes.string,
-            url: PropTypes.string,
-            logo: PropTypes.string,
-        }),
+        image: PropTypes.string,
+        titleHeader: PropTypes.string,
     };
 
     render () {
-        const {name, description, url, logo} = this.props.newsData;
+        const {image, titleHeader} = this.props;
         return <div className="site-item">
-            <h3>{name}</h3>
-            <a href={url}>{description}</a>
-            <br />
-            <br />
-            <img src={logo} alt={description} />
+            <h3>{titleHeader}</h3>
+            <img src={image} alt={titleHeader} />
         </div>
     }
 }
 
-export default SiteItem;
+export default HeaderSection;

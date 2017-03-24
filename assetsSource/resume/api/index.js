@@ -4,28 +4,14 @@ class Api {
             method: 'post',
             headers: {'X-HTTP-Method-Override': 'GET'},
             credentials: 'include',
+            mode: 'no-cors',
         };
 
         return fetch(url, options).then((response) => response.json());
     }
 
-    post (url, data = {}) {
-        const options = {
-            method: 'post',
-            headers: {'X-HTTP-Method-Override': 'POST'},
-            credentials: 'include',
-            body: JSON.stringify(data),
-        };
-
-        return fetch(url, options).then((response) => response.json());
-    }
-
-    getNews () {
-        return this.get('./api/getNewsList.json');
-    }
-
-    getSiteList () {
-        return this.get('./api/getsitelist.json');
+    getUserDataJson () {
+        return this.get('./api/userData.json');
     }
 
 }

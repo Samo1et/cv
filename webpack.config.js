@@ -31,8 +31,8 @@ const webpackConfig = {
                 exclude: /node_modules/,
             },
             {
-                test:   /\.styl$/,
-                include: config.assetsSource,
+                test: /\.styl$/,
+                include: config.src,
                 loader: ExtractTextPlugin.extract('style', function () {
                     return __DEV__ ? 'css?sourceMap!postcss?sourceMap!stylus?sourceMap' : 'css?minimize!postcss!stylus';
                 }())
