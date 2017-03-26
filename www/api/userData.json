@@ -2,6 +2,7 @@
     {
         "user": {
             "content": {
+                "image": "user.png",
                 "name": "Dmitriy",
                 "surname": "Samoilis",
                 "profession": "front-end developer"
@@ -39,25 +40,31 @@
             "header": "education",
             "content": {
                 "training": {
-
+                    "courseName": "Basic Intensive",
+                    "university": "HTML Academy",
+                    "date": "Feb 2016 - March2016",
+                    "description": "Lorem ipsum"
                 }
             }
         },
         "experience": {
             "header": "experience",
             "content": {
-                "company": {}
-
-
+                "company": {
+                    "companyName": "Userstory",
+                    "post": "Front-end developer",
+                    "date": "Feb 2016 - March2016",
+                    "description": "Lorem ipsum"
+                }
             }
         },
         "software": {
             "header": "software",
             "content": {
-                "photoshop": "50%",
-                "illustrator": "30%",
-                "web/php storm": "50%",
-                "sublimeText": "50%"
+                "photoshop": "54",
+                "illustrator": "35",
+                "web/php storm": "60",
+                "sublimeText": "48"
             }
         }
     }

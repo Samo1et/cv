@@ -1,28 +1,99 @@
 import React, {Component, PropTypes} from 'react';
+import {Col} from "react-bootstrap";
 import './style.styl';
 
 class ContentSection extends Component {
-    static PropTypes = {
-
-    };
+    static PropTypes = {};
 
     render () {
-        const {content} = this.props;
-       // const {name, surname, profession} = this.content.user;
-        console.log(content);
+        const {section, content,} = this.props;
+        const {name, surname, profession} = this.props.content;
 
-        return <div className="site-item">
-
-            {/*{this.renderUser(name, surname, profession)}*/}
-        </div>
+        return <section className="site-item">
+            {section == "user" ? this.renderUser(name, surname, profession) : null}
+            {section == "profile" ? this.renderProfile(content) : null}
+            {section == "contact" ? this.renderContact(content) : null}
+            {section == "skills" ? this.renderSkills(content) : null}
+            {section == "education" ? this.renderEducation(content) : null}
+            {section == "experience" ? this.renderExperience(content) : null}
+            {section == "software" ? this.renderSoftware(content) : null}
+        </section>
     }
 
-    renderUser(name, surname, profession) {
-        return (<div className="user">
+    renderUser (name, surname, profession) {
+        return (<section className="user">
+            <img className="user__photo" src="assets/img/user.png" alt="user photo" />
             <div className="user__name">{name}</div>
             <div className="user__surname">{surname}</div>
             <div className="user__profession">{profession}</div>
-        </div>);
+        </section>);
+    }
+
+    renderProfile (content) {
+        return <div className="profile">{content}</div>
+    }
+
+    renderContact (contacts) {
+        return <section className="contact">
+            {Object.keys(contacts).map((contact, index)=> {
+                return <div key={index} className="contact__item">
+                    <Col md={4}>{contact}</Col>
+                    <Col md={8}>{contacts[contact]}</Col>
+                </div>
+            })}
+        </section>
+    }
+
+    renderSkills (skills) {
+        return <section className="skills">
+            {Object.keys(skills).map((skill, index) => {
+                return <div key={index} className="skill__item">
+                    <div className="skill__name">{skill}</div>
+                    <div className="sill__level">{skills[skill]}</div>
+                </div>
+            })}
+        </section>
+    }
+
+    renderEducation (courses) {
+        return <section className="education">
+            {Object.keys(courses).map((course, index) => {
+                const {courseName, date, description, university} = courses[course];
+
+                return <div key={index} className="education__item">
+                    <span className="education__course-name">{courseName} //</span>
+                    <span className="education__date">{date}</span>
+                    <div className="education__university">{university}</div>
+                    <div className="education__description">{description}</div>
+                </div>
+            })}
+        </section>
+    }
+
+    renderExperience (companies) {
+        return <section className="experience">
+            {Object.keys(companies).map((company, index) => {
+                const {companyName, date, description, post} = companies[company];
+
+                return <div key={index} className="experience__item">
+                    <span className="experience__company-name">{companyName} //</span>
+                    <span className="experience__date">{date}</span>
+                    <div className="experience__post">{post}</div>
+                    <div className="experience__description">{description}</div>
+                </div>
+            })}
+        </section>
+    }
+
+    renderSoftware (programs) {
+        return <section className="software">
+            {Object.keys(programs).map((program, index) => {
+                return <Col key={index} md={6}>
+                    <div className="software__name">{program}</div>
+                    <div className="software__level">{programs[program]}</div>
+                </Col>
+            })}
+        </section>
     }
 }
 

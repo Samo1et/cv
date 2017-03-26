@@ -10,6 +10,16 @@ function getUserData () {
     };
 }
 
+function getDefaultData () {
+    return (dispatch, getState, {api}) => {
+        dispatch(userDataLoad());
+
+        return api.getDefaultDataJson()
+            .then((data) => dispatch(userDataLoadSuccess(data)))
+            .catch((error) => dispatch(userDataLoadFail(error)));
+    };
+}
+
 function userDataLoad () {
     return {
         type: dataActions.USER_DATA_LOAD,
@@ -32,5 +42,6 @@ function userDataLoadFail (payload) {
     };
 }
 export {
-    getUserData
+    getUserData,
+    getDefaultData
 }
