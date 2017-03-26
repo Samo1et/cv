@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import Resume from './containers/Resume';
 import configureStore from './configureStore';
 import Api from './api/index';
-import {getUserData} from './redux/actions';
+import {getUserData, getDefaultData} from './redux/actions';
 const isProduction = process.env.NODE_ENV === 'production';
 const api = new Api();
 const store = configureStore(!isProduction, { api });

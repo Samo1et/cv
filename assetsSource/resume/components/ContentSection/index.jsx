@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {Col} from "react-bootstrap";
+import ProgressBar from "resume/components/ProgressBar/index";
 import './style.styl';
 
 class ContentSection extends Component {
@@ -7,10 +8,9 @@ class ContentSection extends Component {
 
     render () {
         const {section, content,} = this.props;
-        const {name, surname, profession} = this.props.content;
 
         return <section className="site-item">
-            {section == "user" ? this.renderUser(name, surname, profession) : null}
+            {section == "user" ? this.renderUser(content) : null}
             {section == "profile" ? this.renderProfile(content) : null}
             {section == "contact" ? this.renderContact(content) : null}
             {section == "skills" ? this.renderSkills(content) : null}
@@ -20,9 +20,13 @@ class ContentSection extends Component {
         </section>
     }
 
-    renderUser (name, surname, profession) {
+    renderUser (userData) {
+        const {name, surname, profession, image} = userData;
+        const src = "assets/img/" + image;
+
         return (<section className="user">
-            <img className="user__photo" src="assets/img/user.png" alt="user photo" />
+            {image ?  <img className="user__photo" src={src} alt="user photo" />
+                : <div className="user__default-photo"></div>}
             <div className="user__name">{name}</div>
             <div className="user__surname">{surname}</div>
             <div className="user__profession">{profession}</div>
@@ -90,7 +94,7 @@ class ContentSection extends Component {
             {Object.keys(programs).map((program, index) => {
                 return <Col key={index} md={6}>
                     <div className="software__name">{program}</div>
-                    <div className="software__level">{programs[program]}</div>
+                    <ProgressBar value={programs[program]} />
                 </Col>
             })}
         </section>

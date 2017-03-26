@@ -61,10 +61,10 @@
         "software": {
             "header": "software",
             "content": {
-                "photoshop": "54",
-                "illustrator": "35",
-                "web/php storm": "60",
-                "sublimeText": "48"
+                "photoshop": "54%",
+                "illustrator": "35%",
+                "web/php storm": "60%",
+                "sublimeText": "48%"
             }
         }
     }

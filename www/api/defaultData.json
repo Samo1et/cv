@@ -90,12 +90,12 @@
         "software": {
             "header": "software",
             "content": {
-                "photoshop": "54",
-                "illustrator": "35",
-                "INDESIGN": "60",
-                "DREAMWEAVER": "48",
-                "AFTER EFFECTS": "66",
-                "HTML&CSS3": "88"
+                "photoshop": "54%",
+                "illustrator": "35%",
+                "INDESIGN": "60%",
+                "DREAMWEAVER": "48%",
+                "AFTER EFFECTS": "66%",
+                "HTML&CSS3": "88%"
             }
         }
     }
