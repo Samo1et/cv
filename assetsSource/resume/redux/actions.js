@@ -16,11 +16,11 @@ function userDataLoad () {
     };
 }
 
-function userDataLoadSuccess (newsList) {
+function userDataLoadSuccess (userData) {
     return {
         type: dataActions.USER_DATA_LOAD_SUCCESS,
         payload: {
-            newsList
+            userData
         },
     };
 }

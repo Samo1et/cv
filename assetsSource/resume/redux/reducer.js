@@ -17,7 +17,7 @@ function reducer (state = initialState, action) {
             return {
                 ...state,
                 isDataLoad: false,
-                userData: action.payload,
+                userData: action.payload.userData[0],
             };
 
         case dataActions.USER_DATA_LOAD_FAIL:

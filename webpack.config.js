@@ -36,6 +36,10 @@ const webpackConfig = {
                 loader: ExtractTextPlugin.extract('style', function () {
                     return __DEV__ ? 'css?sourceMap!postcss?sourceMap!stylus?sourceMap' : 'css?minimize!postcss!stylus';
                 }())
+            },
+            {
+                test: /\.svg$/,
+                loader: 'react-svg?es5=1'
             }
         ]
     },

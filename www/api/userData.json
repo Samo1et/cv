@@ -1,6 +1,59 @@
 [
     {
-        "id": 1,
-        "name": "Википедия"
+        "user": {
+            "name": "Dmitriy",
+            "surname": "Samoilis",
+            "profession": "front-end developer"
+        },
+        "profile": {
+            "header": "profile",
+            "content": "User profile"
+        },
+        "contact": {
+            "address": "Tomsk, per, Karskiy 13",
+            "e-mail": "dmsamoilis@gmail.com",
+            "phone": "+79528814112",
+            "website": "https://samo1et.github.io/cv/www/"
+        },
+        "skills": {
+            "header": "skills",
+            "content": {
+                "html5": "8",
+                "css3": "6",
+                "java script": "5",
+                "jquery": "6",
+                "react": "4",
+                "redux:": "4",
+                "webpack": "5",
+                "less, stylus": "5",
+                "php": "4",
+                "node.js": "3"
+            }
+        },
+        "education": {
+            "header": "education",
+            "content": {
+                "training": {
+
+                }
+            }
+        },
+        "experience": {
+            "header": "experience",
+            "content": {
+                "company": {}
+
+
+            }
+        },
+        "software": {
+            "header": "software",
+            "content": {
+                "photoshop": "50%",
+                "illustrator": "30%",
+                "web/php storm": "50%",
+                "sublimeText": "50%"
+            }
+        }
     }
 ]

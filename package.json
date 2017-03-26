@@ -36,6 +36,7 @@
     "postcss": "^5.2.8",
     "postcss-gradient-transparency-fix": "^1.0.3",
     "postcss-loader": "^1.2.1",
+    "react-svg-loader": "1.1.1",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
