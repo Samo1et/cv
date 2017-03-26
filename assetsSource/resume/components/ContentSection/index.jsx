@@ -7,9 +7,10 @@ class ContentSection extends Component {
     static PropTypes = {};
 
     render () {
-        const {section, content,} = this.props;
+        const {section, content} = this.props;
 
         return <section className="site-item">
+
             {section == "user" ? this.renderUser(content) : null}
             {section == "profile" ? this.renderProfile(content) : null}
             {section == "contact" ? this.renderContact(content) : null}
@@ -53,7 +54,7 @@ class ContentSection extends Component {
             {Object.keys(skills).map((skill, index) => {
                 return <div key={index} className="skill__item">
                     <div className="skill__name">{skill}</div>
-                    <div className="sill__level">{skills[skill]}</div>
+                    <div className="skill__level">{skills[skill]}</div>
                 </div>
             })}
         </section>
@@ -94,6 +95,7 @@ class ContentSection extends Component {
             {Object.keys(programs).map((program, index) => {
                 return <Col key={index} md={6}>
                     <div className="software__name">{program}</div>
+
                     <ProgressBar value={programs[program]} />
                 </Col>
             })}

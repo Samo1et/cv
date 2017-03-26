@@ -43,6 +43,8 @@ class Resume extends Component {
                 </div>
                 {Object.keys(userData).map((section, index) => {
                     const {header, content} = userData[section];
+                    const toLeft = [0,1,2,3];
+
                     return (<Col md={6} key={index}>
                             {header ? <HeaderSection titleHeader={header} /> : null}
                             <ContentSection content={content} section={section} />
