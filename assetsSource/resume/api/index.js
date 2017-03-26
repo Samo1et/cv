@@ -1,10 +1,9 @@
 class Api {
     get (url) {
         const options = {
-            method: 'post',
-            headers: {'X-HTTP-Method-Override': 'POST'},
-            credentials: 'include',
-            mode: 'no-cors'
+            method: 'GET',
+            headers: {'X-HTTP-Method-Override': 'GET'},
+            credentials: 'include'
         };
 
         return fetch(url, options).then((response) => response.json());
