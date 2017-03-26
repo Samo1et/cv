@@ -9,28 +9,29 @@ import Software from './img/pc.svg'
 
 class HeaderSection extends Component {
     static propTypes = {
-        image: PropTypes.string,
         titleHeader: PropTypes.string,
     };
 
     render () {
         const {titleHeader} = this.props;
 
-        return <div className="header-section">
-            {this.renderSVG(titleHeader)}
-            <h3>{titleHeader}</h3>
-
+        return <div className="header-section clearfix">
+            <div className="header-section__img">
+                {this.renderSVG(titleHeader)}
+            </div>
+            <h3 className="header-section__title">{titleHeader}</h3>
+            <span className="header-section__line"></span>
         </div>
     }
 
     renderSVG (titleHeader) {
         switch(titleHeader) {
-            case 'education': return <Education className="header-section__img" />;
-            case 'software': return <Software className="header-section__img" />;
-            case 'profile': return <Profile className="header-section__img" />;
-            case 'skills': return <Skills className="header-section__img" />;
-            case 'experience': return <Experience className="header-section__img" />;
-            case 'contact': return <Contact className="header-section__img" />;
+            case 'education': return <Education />;
+            case 'software': return <Software />;
+            case 'profile': return <Profile />;
+            case 'skills': return <Skills />;
+            case 'experience': return <Experience />;
+            case 'contact': return <Contact />;
         }
     }
 }

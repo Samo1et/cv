@@ -22,22 +22,20 @@ class Resume extends Component {
         user: PropTypes.object,
     };
 
-
-
     render () {
         const {userData} = this.props;
         return (
             <Grid>
                 {Object.keys(userData).map((section, index) => {
                     const {header, content} = userData[section];
+                    
 
                     return (<Col md={6} key={index}>
                             {header ? <HeaderSection titleHeader={header} /> : null}
-                            {content ? <ContentSection conntent={content} /> : null}
+                            <ContentSection content={content} />
                     </Col>
                     );
                 })}
-
             </Grid>
         );
     }

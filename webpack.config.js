@@ -8,7 +8,7 @@ const __DEV__ = 'development' === process.env.NODE_ENV;
 
 const config = {
     src: path.join(__dirname, 'assetsSource'),
-    dist: path.join(__dirname, 'www/build')
+    dist: path.join(__dirname, 'www/assets')
 };
 
 const webpackConfig = {
