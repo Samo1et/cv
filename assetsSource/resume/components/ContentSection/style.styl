@@ -27,10 +27,84 @@ mainColor = #0071BB;
   &__surname
     text-transform: uppercase;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 900;
 
   &__profession
     text-transform: uppercase
     font-size: 14px
+    font-weight: bold
 
 
+.contact
+  &__item
+    margin-top: 10px
+    margin-bottom: 10px
+
+  &__item-title
+    text-transform: uppercase
+    color: mainColor
+    font-weight: bold
+
+.education
+  &__item
+    margin-bottom: 10px
+    margin-top: 10px
+    position: relative
+    margin-left: 20px
+
+  &__item::before
+    content: ''
+    width: 10px
+    height: 10px
+    background: #000
+    position: absolute;
+    border-radius: 50%
+    top: 5px
+    left: -20px
+
+  &__course-name
+    font-weight: bold
+    color: mainColor
+    text-transform: uppercase
+
+  &__university
+    text-transform: uppercase
+    font-weight: bold
+
+.experience
+  &__item
+    margin-bottom: 10px
+    margin-top: 10px
+    position: relative
+    margin-left: 20px
+
+  &__item::before
+    content: ''
+    width: 10px
+    height: 10px
+    background: #000
+    position: absolute;
+    border-radius: 50%
+    top: 5px
+    left: -20px
+
+  &__company-name
+    font-weight: 900
+    text-transform: uppercase
+
+  &__post
+    text-transform: uppercase
+
+.skills
+  text-align: center
+
+  &__item
+    text-align: center
+
+  &__name
+    text-transform: uppercase
+    font-weight: bold
+
+.software
+  &__name
+    text-transform: uppercase

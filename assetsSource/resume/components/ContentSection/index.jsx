@@ -42,8 +42,8 @@ class ContentSection extends Component {
         return <section className="contact">
             {Object.keys(contacts).map((contact, index)=> {
                 return <div key={index} className="contact__item">
-                    <Col md={4}>{contact}</Col>
-                    <Col md={8}>{contacts[contact]}</Col>
+                    <Col md={4}><span className="contact__item-title">{contact}</span></Col>
+                    <Col md={8}><span className="contact__item-content">{contacts[contact]}</span></Col>
                 </div>
             })}
         </section>
