@@ -10,7 +10,7 @@
         },
         "profile": {
             "header": "profile",
-            "content": "User profile"
+            "content": "I love React/Redux and WEB development"
         },
         "contact": {
             "header": "contact",
@@ -24,16 +24,10 @@
         "skills": {
             "header": "skills",
             "content": {
-                "html5": "8",
-                "css3": "6",
-                "java script": "5",
-                "jquery": "6",
-                "react": "4",
-                "redux:": "4",
-                "webpack": "5",
-                "less, stylus": "5",
-                "php": "4",
-                "node.js": "3"
+                "CREATIVE": "9",
+                "TEAMWORK": "11",
+                "INNOVATE": "6",
+                "COMMUNICATION": "11"
             }
         },
         "education": {
@@ -43,7 +37,7 @@
                     "courseName": "Basic Intensive",
                     "university": "HTML Academy",
                     "date": "Feb 2016 - March2016",
-                    "description": "Lorem ipsum"
+                    "description": "During the course you will work as real layout designers: create markup, work with a graphic layout in Photoshop, build a grid of pages, decorate decorative elements and text content, optimize the code and prepare a completed project for publication."
                 }
             }
         },
@@ -64,7 +58,12 @@
                 "photoshop": "54%",
                 "illustrator": "35%",
                 "web/php storm": "60%",
-                "sublimeText": "48%"
+                "sublimeText": "48%",
+                "html/css": "80%",
+                "react/redux": "40%",
+                "javaScript/jQuery": "66%",
+                "webpack": "40%",
+                "less/stylus/saas": "80%"
             }
         }
     }

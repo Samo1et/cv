@@ -8,6 +8,7 @@ class ContentSection extends Component {
 
     render () {
         const {section, content} = this.props;
+        let loopArray
 
         return <section className="site-item">
 
@@ -52,9 +53,16 @@ class ContentSection extends Component {
     renderSkills (skills) {
         return <section className="skills">
             {Object.keys(skills).map((skill, index) => {
-                return <div key={index} className="skill__item">
-                    <div className="skill__name">{skill}</div>
-                    <div className="skill__level">{skills[skill]}</div>
+                let rows = [], i = 0, len = 12;
+
+                while (++i <= len) rows.push(i);
+
+                return <div key={index} className="skills__item">
+                    <div className="skills__name">{skill}</div>
+                    {rows.map((i) => {
+                        let levelClass = skills[skill] < i ? "skills__circle--clear": "skills__circle--full";
+                        return <span className={levelClass} key={i}></span>;
+                    })}
                 </div>
             })}
         </section>
